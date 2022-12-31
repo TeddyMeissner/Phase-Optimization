@@ -17,12 +17,10 @@ The first equality constraint represents the conservation of of the selected com
 ![A = 0](https://user-images.githubusercontent.com/112519285/210150692-23702ca9-9f62-498c-ade6-c2cb9ef8c88b.png)
 
 **Minimize**
-$$
-\begin{align}
+$\begin{aligned}
 l(z^\alpha,z^\beta,x_1^\alpha,x_1^\beta,\lambda) &=  z^\alpha g^\alpha(x_1^\alpha) +(1-z^\alpha)g^\beta(x_1^\beta)+ A z^\alpha (1-z^\alpha) \\
 &= - \lambda( (z^\alpha x_1^\alpha +(1-z^\alpha)x_1^\beta - X)
-\end{align}
-$$
+\end{aligned}$
 **Subject to**
 $$ 0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^\alpha,x_1^\beta,X \leq 1$$
 Finding the partial derivatives with respect to all variables we get the following equations, 
