@@ -17,32 +17,24 @@ The first equality constraint represents the conservation of of the selected com
 ![A = 0](https://user-images.githubusercontent.com/112519285/210150692-23702ca9-9f62-498c-ade6-c2cb9ef8c88b.png)
 
 **Minimize**
-$\begin{aligned}
-l(z^\alpha,z^\beta,x_1^\alpha,x_1^\beta,\lambda) &=  z^\alpha g^\alpha(x_1^\alpha) +(1-z^\alpha)g^\beta(x_1^\beta)+ A z^\alpha (1-z^\alpha) \\
-&= - \lambda( (z^\alpha x_1^\alpha +(1-z^\alpha)x_1^\beta - X)
-\end{aligned}$
+$$l(z^\alpha,z^\beta,x_1^\alpha,x_1^\beta,\lambda) =  z^\alpha g^\alpha(x_1^\alpha) +(1-z^\alpha)g^\beta(x_1^\beta)+ A z^\alpha (1-z^\alpha) - \lambda( (z^\alpha x_1^\alpha +(1-z^\alpha)x_1^\beta - X)$$
 **Subject to**
-$$ 0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^\alpha,x_1^\beta,X \leq 1$$
+$$0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^\alpha,x_1^\beta,X \leq 1$$
 Finding the partial derivatives with respect to all variables we get the following equations, 
-$$
-\begin{aligned}
-    \frac{\partial l}{\partial z^\alpha} &=  g^\alpha(x_1^\alpha) - g^\beta(x_1^\beta) + A(1 - 2z^\alpha) - \lambda(x_1^\alpha + x_1^\beta) = 0\\
-        \frac{\partial l}{\partial x_1^\alpha} &=  z^\alpha(\frac{d g^\alpha}{d x_1^\alpha} - \lambda) = 0\\
-    \frac{\partial l}{\partial x_1^\beta} &= (1-z^\alpha)(\frac{d g^\beta}{d x_1^\beta} - \lambda) = 0\\
-    \frac{\partial l}{\partial \lambda} &= z^\alpha x_1^\alpha +(1 - z^\alpha) x_1^\beta - X = 0
-\end{aligned}
-$$
-The following system of equations has 3 possible solutions. 
-\begin{enumerate}
-    \item $z^\alpha = 1, \implies x_1^\alpha = X$\\
-    Minimum: $g^\alpha(X)$
-    \item $z^\alpha = 0, \implies x_1^\beta = X$\\
-    Minimum: $g^\beta(X)$
-    \item $0< z^\alpha < 1, \implies z^\alpha = \frac{X - x_1^\beta}{x_1^\alpha - x_1^\beta}$\\
+    $$\frac{\partial l}{\partial z^\alpha} =  g^\alpha(x_1^\alpha) - g^\beta(x_1^\beta) + A(1 - 2z^\alpha) - \lambda(x_1^\alpha + x_1^\beta) = 0$$
+    $$\frac{\partial l}{\partial x_1^\alpha} =  z^\alpha(\frac{d g^\alpha}{d x_1^\alpha} - \lambda) = 0$$
+    $$\frac{\partial l}{\partial x_1^\beta} = (1-z^\alpha)(\frac{d g^\beta}{d x_1^\beta} - \lambda) = 0$$
+    $$\frac{\partial l}{\partial \lambda} = z^\alpha x_1^\alpha +(1 - z^\alpha) x_1^\beta - X = 0$$
+
+The following system of equations has 3 possible solutions. \
+    1. $z^\alpha = 1, \implies x_1^\alpha = X$
+    Minimum: $g^\alpha(X)$\
+    2. $z^\alpha = 0, \implies x_1^\beta = X$
+    Minimum: $g^\beta(X)$\
+    3. $0< z^\alpha < 1, \implies z^\alpha = \frac{X - x_1^\beta}{x_1^\alpha - x_1^\beta}$
     Minimum: $$\frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alpha(x_1^\alpha) - g^\beta(x_1^\beta) + A(1 - 2z^\alpha)}{x_1^\alpha - x_1^\beta}$$
-\end{enumerate}
 In the case where there is no stress between two solid interfaces i.e. $A = 0$, we get the popular common tangent rule, 
 $$\frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alpha(x_1^\alpha) - g^\beta(x_1^\beta)}{x_1^\alpha - x_1^\beta}$$
 which states the solution is in either one phase or lies on the common tangent between two phases. This is depicted in the phase diagram above where the molar fractions of two phases were found. To depict this, let us choose two free energy functions at a specific temperature. Free energy functions are typically convex with parabolic shape thus we will choose 2 parabolas to depict these. 
-$$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta $$
-For graphing purposes we choose, $a = 40, x_0^\alpha = .2, x_0^\beta = .8, b^\alpha = 10, b^\beta = 11$. The following depicts these two functions.\\
+$$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta$$
+For graphing purposes we choose, $a = 40, x_0^\alpha = .2, x_0^\beta = .8, b^\alpha = 10, b^\beta = 11$. The following depicts these two functions.
