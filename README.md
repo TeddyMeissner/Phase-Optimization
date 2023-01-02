@@ -17,7 +17,7 @@ In general, a system where $g_e=0$ has been well studied but cases where $g_e\ \
 $g_e=z_\alpha z_\beta VR\epsilon^2/\left(1-\nu\right)$
 
 To date, we have analyzed the coherent equilibrium between three phases in a eutectic system. Our results have shown at the eutectic temperature $T_{eu}$ under no coherent stress, given any coherent stress the eutectic point disappears, and we no longer have three phases in equilibrium. This is important as many systems have some lattice misfits creating a coherent stress. At temperatures below $T_{eu}$ we have found the three-phase equilibrium to reappear under a certain amount of stress at a range of compositions shown in Figure 1. \\
-image.png
+![Full pic](https://user-images.githubusercontent.com/112519285/210278835-145a72f6-f074-467e-845a-bc952a0bdbb4.jpg)
 Results for figure 1 are shown for a theoretical eutectic system using general parabolic functions for the free energies. Future works plan on analyzing peritectic systems with a similar approach and using both results to better understand real systems with coherent stress. While studying the simplified model under coherent stress gives understanding about the behavior of the changes in a phase diagram, Cahn & Larche recognized that the coherence energy in realistic alloys depends on the microstructure and proposed the more general equation, 
 
 $$g_e=Az\left(1-z\right)f\left(x_\alpha,x_\beta,z\right)$$
