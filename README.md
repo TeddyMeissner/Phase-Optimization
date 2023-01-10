@@ -38,3 +38,5 @@ $$\frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alp
 which states the solution is in either one phase or lies on the common tangent between two phases. This is depicted in the phase diagram above where the molar fractions of two phases were found. To depict this, let us choose two free energy functions at a specific temperature. Free energy functions are typically convex with parabolic shape thus we will choose 2 parabolas to depict these. 
 $$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta$$
 For graphing purposes we choose, $a = 40, x_0^\alpha = .2, x_0^\beta = .8, b^\alpha = 10, b^\beta = 11$. The following depicts these two functions.
+
+and hello
