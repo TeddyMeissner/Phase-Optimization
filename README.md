@@ -45,12 +45,12 @@ binary_A_0.plot_specific_temp(T_grid[2],x_lim = [.15,.85],y_lim = [9,12])
 binary_A_2.plot_specific_temp(T_grid[2],x_lim = [.15,.85],y_lim = [9,12])
 ```
 <p float="left">
-  <img src="images/Binary%20Phase%20Diagram,%20A%20=%200.png" width="45%" /> 
-<img src="images/Binary%20Phase%20Diagram,%20A%20=%202.png" width="45%" /> 
+  <img src="Images/Binary%20Phase%20Diagram,%20A%20=%200.png" width="45%" /> 
+<img src="Images/Binary%20Phase%20Diagram,%20A%20=%202.png" width="45%" /> 
 </p>
 
 <p float="left">
-  <img src="images/temp_1_17,A%20=0.png" width="45%" /> 
-<img src="images/temp_1_17,A%20=2.png" width="45%" /> 
+  <img src="Images/temp_1_17,A%20=0.png" width="45%" /> 
+<img src="Images/temp_1_17,A%20=2.png" width="45%" /> 
 </p>
 
