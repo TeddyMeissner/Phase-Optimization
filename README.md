@@ -54,3 +54,50 @@ binary_A_2.plot_specific_temp(T_grid[2],x_lim = [.15,.85],y_lim = [9,12])
 <img src="Images/temp_1_17,A%20=2.png" width="45%" /> 
 </p>
 
+## Methods
+We are looking to solve:  
+**Minimize**
+$$g(z^\alpha,z^\beta,x^\alpha,x^\beta,x^L) = z^Lg^L(x^L) + z^\alpha g^\alpha(x^\alpha) +z^\beta g^\beta(x^\beta) + A z^\alpha z^\beta$$
+**Subject to**
+$$X = z^Lx_1^L + z^\alpha x^\alpha +z^\beta x^\beta$$
+$$z^\alpha + z^\beta + z^L = 1$$
+$$ 0 \leq z^L,z^\alpha,z^\beta, x^L, x^\alpha,x^\beta,X \leq 1$$
+The first equality constraint represents the conservation of of the selected composition $X$. The second equality constraint represents preservation of Mass. The inequality constraint represents the necessary conditions for the existence of a phase. To solve the generalized optimization problem by the method of Lagrange multipliers we set the problem up as, 
+
+**Minimize**
+$$l(z^\alpha,z^\beta,x_1^\alpha,x_1^\beta,x_1^L,\lambda) = (1-z^\alpha-z^\beta)g^L(x_1^L) + z^\alpha g^\alpha(x_1^\alpha) +z^\beta g^\beta(x_1^\beta)+ A z^\alpha z^\beta $$
+$$- \lambda( (1-z^\alpha-z^\beta)x_1^L + z^\alpha x_1^\alpha +z^\beta x_1^\beta - X)$$
+**Subject to**
+$$ 0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^L, x_1^\alpha,x_1^\beta,X \leq 1$$
+
+Where the seven possible solutions are (refer to the [writeup](Breif%20writeup.pdf) for further clarification), 
+
+1. $g^L(X)$
+   * $z^\alpha,z^\beta = 0$
+2. $g^\alpha(X)$ 
+    * $z^L,z^\beta = 0$
+3. $g^\beta(X)$
+   * $z^L,z^\alpha = 0$
+4. $(1-z^\beta)g^L(x^L) + z^\beta g^\beta(x^\beta)$
+   * $z^\alpha = 0$
+   * Where, $z^\beta,x^L,x^\beta$ are found by the equations,
+$$\frac{d g^L}{d x_1^L} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\beta(x^\beta) - g^L(x^L)}{x^\beta - x^L},z^\beta = \frac{X - x^L}{x^\beta - x^L}$$
+5. $(1-z^\alpha)g^L(x^L) + z^\alpha g^\alpha(x^\alpha)$
+   * $z^\beta = 0$
+   * Where, $z^\alpha,x^L,x^\alpha$ are found by the equations,
+$$\frac{d g^L}{d x_1^L} = \frac{d g^\alpha}{d x_1^\alpha} = \frac{g^\alpha(x^\alpha) - g^L(x^L)}{x^\alpha - x^L},z^\alpha = \frac{X - x^L}{x^\alpha - x^L}$$
+6. $z^\alpha g^\alpha(x^\alpha) + z^\beta g^\beta(x^\beta) + A z^\alpha z^\beta$
+   * $z^L = 0$
+   * Where $z^\alpha,z^\beta,x^\alpha,x^\beta$ are found by, 
+$$\frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alpha(x_1^\alpha)-g^\beta(x_1^\beta) + A (1 - 2 z^\alpha)}{x_1^\alpha - x_1^\beta},z^\alpha = \frac{X - x^\beta}{x^\alpha - x^\beta}$$
+7. $(1-z^\alpha - z^\beta)g^L(x^L) + z^\alpha g^\alpha(x^\alpha) + z^\beta g^\beta(x^\beta) + A z^\alpha z^\beta$
+   * Where $z^\alpha,z^\beta,x^L,x^\alpha,x^\beta$ are found by, 
+$$\frac{d g^L}{d x_1^L} = \frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alpha(x_1^\alpha)-g^L(x_1^L) + A z^\beta}{x_1^\alpha - x_1^L} = \frac{g^\beta(x_1^\beta)-g^L(x_1^L) + A z^\alpha}{x_1^\beta - x_1^L}$$
+$$z^\alpha = \frac{X - x^L}{x^\alpha - x^L} + z^\beta(\frac{x^L - x^\beta}{x^\alpha - x^\beta})$$
+
+
+
+## Findings
+
+### Figures
+
