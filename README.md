@@ -1,5 +1,5 @@
 # Phase-Optimization
-This code looks to further the construction of modern phase diagrams which are typically constructed using computational methods (calculation of phase diagrams or CALPHAD). he essence of the CALPHAD methodology first lies in the fitting of a Gibbs free energy function to experimental data and quantities derived from density functional theory (DFT) calculations. Once the data is fit to a free energy function the second step is to minimize the free energy as a function of temperature and chemical composition. The phase diagrams and free energy functions created by the CALPHAD methodology are a key component in simulating microstructure evolutions and extracting physical properties such as strength, elasticity, etc. The typical method to study microstructure evolutions is through the phase field method, and thus a key component is materials discovery. It is important to note that most existing phase diagrams and underlying CALPHAD methods are constructed with the temperature and composition as the only variables. At the same time, many complex alloys have stress naturally arising in their microstructures, which may have strong effect on the thermodynamics of the alloy reflected in its phase diagram. Often, these components are not included or “baked” into the CALPHAD models as they can be extremely difficult to measure experimentally, and quantities derived from DFT calculations can be noisy. One can see in extrapolating the free energies into the predictions of systems not yet experimentally studied, the propagation of system specific information (interaction parameters, elasticity, etc.) can arise many issues. Thus, our research aims to theoretically study the effects of interfacial stress on phase diagrams to resolve the differences between current experimental and computational results.  
+This code looks to further the construction of modern phase diagrams which are typically constructed using computational methods (calculation of phase diagrams or CALPHAD). he essence of the CALPHAD methodology first lies in the fitting of a Gibbs free energy function to experimental data and quantities derived from density functional theory (DFT) calculations. Once the data is fit to a free energy function the second step is to minimize the free energy as a function of temperature and chemical composition. The phase diagrams and free energy functions created by the CALPHAD methodology are a key component in simulating microstructure evolutions and extracting physical properties such as strength, elasticity, etc. The typical method to study microstructure evolutions is through the phase field method, and thus a key component is materials discovery. It is important to note that most existing phase diagrams and underlying CALPHAD methods are constructed with the temperature and composition as the only variables. At the same time, many complex alloys have stress naturally arising in their microstructures, which may have strong effect on the thermodynamics of the alloy reflected in its phase diagram. Often, these components are not included or “baked” into the CALPHAD models as they can be extremely difficult to measure experimentally, and quantities derived from DFT calculations can be noisy. One can see in extrapolating the free energies into the predictions of systems not yet experimentally studied, the propagation of system specific information (interaction parameters, elasticity, etc.) can arise many issues. Thus, our research aims to theoretically study the effects of interfacial stress on phase diagrams to resolve the differences between current experimental and computational results. For a more detailed description refer to the [writeup](Breif%20writeup.pdf). 
 
 ## Formulation
 
@@ -95,9 +95,31 @@ $$\frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alp
 $$\frac{d g^L}{d x_1^L} = \frac{d g^\alpha}{d x_1^\alpha} = \frac{d g^\beta}{d x_1^\beta} = \frac{g^\alpha(x_1^\alpha)-g^L(x_1^L) + A z^\beta}{x_1^\alpha - x_1^L} = \frac{g^\beta(x_1^\beta)-g^L(x_1^L) + A z^\alpha}{x_1^\beta - x_1^L}$$
 $$z^\alpha = \frac{X - x^L}{x^\alpha - x^L} + z^\beta(\frac{x^L - x^\beta}{x^\alpha - x^\beta})$$
 
-
+The code provided uses these solutions to:
+1. Start with a single temperature
+2. Find the solutions for a variable $X$ which are referred to as "common tangents"
+3. Find all of the points where the common tangents intersect with eachother and the free energy functions (these are referred to in the code as "important points")
+4. Finds the phase at each important point and plots it
+5. Repeat until all wanted temperatures are accounted for 
 
 ## Findings
-
+In a binary three-phase, the eutectic point (that which three phases in equilibrium) becomes a three phase region under stress. At temperatures above the Eutectic point with no-stress, there are no changes in the phase diagram under any amounts of stress. This is due to the fact that the stress is between the $\alpha$ and $\beta$ phases which do not exist above the Eutectic temperature. Below the Eutectic point, we see a disappearance of the $\alpha + \beta$ phase, and a growth from a Eutectic point to a three-phase region. 
 ### Figures
+
+The figures below are using the following free energy functions: 
+$$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta ,
+g^L(x^\beta) = a(x_1^L - x_0^L)^2 + b^L - T$$
+Where, $a = 40, x_0^\alpha = .2, x_0^\beta = .8, x_0^L = .5 b^\alpha = 10, b^\beta = 11, b^L = 12$.
+<p float="left">
+  <img src="Images/A%20=%200.png" width="45%" /> 
+<img src="Images/A%20=%202.png" width="45%" /> 
+</p>
+<p float="left">
+  <img src="Images/A%20=%203.png" width="45%" /> 
+<img src="Images/A%20=%2010.png" width="45%" /> 
+</p>
+
+
+
+
 
