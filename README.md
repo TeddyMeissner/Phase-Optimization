@@ -14,6 +14,11 @@ In general, a system where $g_e=0$ has been well studied but cases where $g_e\ \
 $$g_e=z_\alpha z_\beta VR\epsilon^2/\left(1-\nu\right)$$
 For simplification the code provided sets $A = VR\epsilon^2/\left(1-\nu\right)$ as these are assumed constants giving $g_e = A z_\alpha z_\beta$
 
+## Using the Code
+To run this project, 
 
-
+```
+git clone https://github.com/TeddyMeissner/Phase-Optimization.git
+```
+From here the core code can be found in the file Binary 3-Phase.ipynb. 
 
