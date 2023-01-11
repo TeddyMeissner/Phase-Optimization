@@ -3,7 +3,7 @@ This code looks to further the construction of modern phase diagrams which are t
 
 ## Formulation
 
-To tackle the issue of extract system specific energy, we will first examine the model developed by [Cahn & Larche](https://www.sciencedirect.com/science/article/pii/0001616084901731) which seeks to minimize the free energy for a system, for coherent equilibrium between three phases ($\alpha, \beta, L$), 
+To tackle the issue of extract system specific energy, we will first examine the model developed by [Cahn & Larche](https://www.sciencedirect.com/science/article/pii/0001616084901731) which seeks to minimize the free energy for a system, for coherent equilibrium between three phases ( $\alpha$, $\beta$, $L$), 
 
 $$g=z_Lg_L\left(x_L\right)+z_\alpha g_\alpha\left(x_\alpha\right)+z_\beta g_\beta\left(x_\beta\right)+g_e$$
 
