@@ -61,14 +61,14 @@ $$g(z^\alpha,z^\beta,x^\alpha,x^\beta,x^L) = z^Lg^L(x^L) + z^\alpha g^\alpha(x^\
 **Subject to**
 $$X = z^Lx_1^L + z^\alpha x^\alpha +z^\beta x^\beta$$
 $$z^\alpha + z^\beta + z^L = 1$$
-$$ 0 \leq z^L,z^\alpha,z^\beta, x^L, x^\alpha,x^\beta,X \leq 1$$
+$$0 \leq z^L,z^\alpha,z^\beta, x^L, x^\alpha,x^\beta,X \leq 1$$
 The first equality constraint represents the conservation of of the selected composition $X$. The second equality constraint represents preservation of Mass. The inequality constraint represents the necessary conditions for the existence of a phase. To solve the generalized optimization problem by the method of Lagrange multipliers we set the problem up as, 
 
 **Minimize**
 $$l(z^\alpha,z^\beta,x_1^\alpha,x_1^\beta,x_1^L,\lambda) = (1-z^\alpha-z^\beta)g^L(x_1^L) + z^\alpha g^\alpha(x_1^\alpha) +z^\beta g^\beta(x_1^\beta)+ A z^\alpha z^\beta $$
 $$- \lambda( (1-z^\alpha-z^\beta)x_1^L + z^\alpha x_1^\alpha +z^\beta x_1^\beta - X)$$
 **Subject to**
-$$ 0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^L, x_1^\alpha,x_1^\beta,X \leq 1$$
+$$0 \leq z^\alpha,z^\beta,z^\alpha+z^\beta, x_1^L, x_1^\alpha,x_1^\beta,X \leq 1$$
 
 Where the seven possible solutions are (refer to the [writeup](Breif%20writeup.pdf) for further clarification), 
 
