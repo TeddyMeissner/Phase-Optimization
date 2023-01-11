@@ -107,8 +107,7 @@ In a binary three-phase, the eutectic point (that which three phases in equilibr
 ### Figures
 
 The figures below are using the following free energy functions: 
-$$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta ,
-g^L(x^\beta) = a(x_1^L - x_0^L)^2 + b^L - T$$
+$$g^\alpha(x^\alpha) = a(x_1^\alpha - x_0^\alpha)^2 + b^\alpha, g^\beta(x^\beta) = a(x_1^\beta - x_0^\beta)^2 + b^\beta ,g^L(x^\beta) = a(x_1^L - x_0^L)^2 + b^L - T$$
 Where, $a = 40, x_0^\alpha = .2, x_0^\beta = .8, x_0^L = .5 b^\alpha = 10, b^\beta = 11, b^L = 12$.
 <p float="left">
   <img src="Images/A%20=%200.png" width="45%" /> 
